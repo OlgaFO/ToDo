@@ -1,0 +1,16 @@
+ru\developer\xoma\demotodolist\security\SecurityConfig.class
+ru\developer\xoma\demotodolist\persist\repo\ToDoRepository.class
+ru\developer\xoma\demotodolist\controllers\TodoController.class
+ru\developer\xoma\demotodolist\controllers\LoginController.class
+ru\developer\xoma\demotodolist\persist\entity\User.class
+ru\developer\xoma\demotodolist\controllers\ResourceNotFoundException.class
+ru\developer\xoma\demotodolist\persist\repo\UserRepository.class
+ru\developer\xoma\demotodolist\security\Utils.class
+ru\developer\xoma\demotodolist\repr\ToDoRepr.class
+ru\developer\xoma\demotodolist\service\UserService.class
+ru\developer\xoma\demotodolist\repr\UserRepr.class
+ru\developer\xoma\demotodolist\service\ToDoService.class
+ru\developer\xoma\demotodolist\persist\entity\ToDo.class
+ru\developer\xoma\demotodolist\security\SecurityWebApplicationInitializer.class
+ru\developer\xoma\demotodolist\DemotodolistApplication.class
+ru\developer\xoma\demotodolist\security\UserAuthService.class

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	
+<head>
+	<title>Заметки</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" type="text/css" media="all" href="/css/main.css" th:href="@{/css/main.css}" />
+	
+	
+</head>
+
+<body>
+	<form th:action="@{/todo/create}" th:object="${todo}" method="post">
+		<div class="container">
+			<img class="size__dribbble" src="/dribbble_transparent.png">
+			<p class="pod__one">Дата начала</p>
+			<p class="pod__two">Дата окончания</p>
+			<div class="white">
+				<div class="left">
+					<div class="inner__container">
+						<div class="mrgn__main">
+							<strike style="background-image: -webkit-linear-gradient(transparent 0.3em, #fff337 0.3em, #fff337 0.7em, transparent 0.7em);"><a style="color:#000000;text-decoration:none;" th:href="@{/}">ЗАМЕТКИ</a></strike>
+						</div>
+						<input type="hidden" th:field="*{id}">
+						<textarea class="form__field" wrap="on" id="task" th:field="*{task}" placeholder="Задание"></textarea>
+						<div class="set">
+							<small style="display:block;margin-top:-1.5vw;color:red;" th:each="err: ${#fields.errors('task')}" th:text="${err}"></small>
+						</div>
+						<input type="text" class="form__field" autocomplete="off" id="project" th:field="*{project}" placeholder="Проект">
+						<div class="set">
+							<small style="display:block;margin-top:-1.5vw;color:red;" th:each="err: ${#fields.errors('project')}" th:text="${err}"></small>
+						</div>
+						<input type="date" class="form__field" id="startDate" th:field="*{startDate}">
+						<div class="set">
+							<small style="display:block;margin-top:-1.5vw;color:red;" th:each="err: ${#fields.errors('startDate')}" th:text="${err}"></small>
+						</div>
+						<input type="date" class="form__field" id="endDate" th:field="*{endDate}">
+						<div class="set">
+							<small style="display:block;margin-top:-1.5vw;color:red;" th:each="err: ${#fields.errors('endDate')}" th:text="${err}"></small>
+						</div>
+						<button type="submit" class="btn">Сохранить заметку</button>
+					</div>
+				</div>
+				<div class="right">
+					<p class="text">© devXOMA</p>
+				</div>
+			</div>
+			<div class="black">
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

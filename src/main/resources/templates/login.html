@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+	<title>Заметки</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<link rel="stylesheet" type="text/css" media="all" href="/css/main.css" th:href="@{/css/main.css}" />
+</head>
+
+<body>
+	<form th:action="@{/authenticateTheUser}" method="post">
+		<div class="container">
+			<img class="size__main" src="main_transparent.png">
+			<div class="white">
+				<div class="left">
+					<div class="inner__container">
+						<div class="mrgn__main">
+							<strike style="background-image: -webkit-linear-gradient(transparent 0.3em, #fff337 0.3em, #fff337 0.7em, transparent 0.7em);">ЗАМЕТКИ</strike>
+						</div>
+						<input type="text" class="form__field" autocomplete="off" id="username" name="username" placeholder="Логин">
+						<input type="password" class="form__field" autocomplete="off" id="password" name="password" placeholder="Пароль">
+						<div class="set">
+							<small style="display:block;margin-top:-1.5vw;color:red;" th:if="${param.error != null}">некорректный логин или пароль</small>
+						</div>
+						<button type="submit" class="btn">Войти</button>
+						<div class="mrgn__second">
+							<strike id="link" style="background-image: -webkit-linear-gradient(transparent 0.3em, #fff337 0.3em, #fff337 0.7em, transparent 0.7em);"><a style="color:#000000;text-decoration:none;" th:href="@{/register}">Зарегистрироваться</a></strike>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<p class="text">© devXOMA</p>
+				</div>
+			</div>
+			<div class="black">
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
